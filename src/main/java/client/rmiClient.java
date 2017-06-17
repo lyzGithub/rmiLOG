@@ -14,7 +14,7 @@ public class rmiClient {
         public static void main(String args[]){
             try {
                 //在RMI服务注册表中查找名称为RHello的对象，并调用其上的方法
-                remoteInterface rhello =(remoteInterface) Naming.lookup("rmi://localhost:8888/RHello");
+                remoteInterface rhello =(remoteInterface) Naming.lookup("rmi://114.212.87.91:8888/RHello");
                 System.out.println(rhello.helloWorld());
                 System.out.println(rhello.sayHelloToSomeBody("boy!"));
             } catch (NotBoundException e) {
