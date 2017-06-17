@@ -1,4 +1,4 @@
-package server;
+package com.server;
 
 import org.apache.commons.logging.Log;
 import org.apache.commons.logging.LogFactory;

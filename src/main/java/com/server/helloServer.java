@@ -1,6 +1,5 @@
-package server;
+package com.server;
 
-import client.rmiClient;
 import org.apache.commons.logging.Log;
 import org.apache.commons.logging.LogFactory;
 
@@ -17,7 +16,7 @@ public class helloServer {
     private static final Log LOG = LogFactory
             .getLog(helloServer.class);
     public static void main(String args[]) {
-        LOG.info("I am in hello server!");
+        LOG.info("I am in hello com.server!");
         try {
             //创建一个远程对象
             remoteInterface rhello = new remoteImple();

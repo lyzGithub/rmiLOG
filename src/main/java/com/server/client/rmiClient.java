@@ -1,6 +1,6 @@
-package client;
+package com.server.client;
 
-import server.remoteInterface;
+import com.server.remoteInterface;
 
 import java.net.MalformedURLException;
 import java.rmi.Naming;
@@ -16,7 +16,7 @@ public class rmiClient {
     private static final Log LOG = LogFactory
             .getLog(rmiClient.class);
         public static void main(String args[]){
-            LOG.info("I am in client main");
+            LOG.info("I am in com.server.client main");
             try {
                 //在RMI服务注册表中查找名称为RHello的对象，并调用其上的方法
                 remoteInterface rhello =(remoteInterface) Naming.lookup("rmi://114.212.87.91:8888/RHello");
