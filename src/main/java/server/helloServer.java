@@ -1,5 +1,9 @@
 package server;
 
+import client.rmiClient;
+import org.apache.commons.logging.Log;
+import org.apache.commons.logging.LogFactory;
+
 import java.net.MalformedURLException;
 import java.rmi.AlreadyBoundException;
 import java.rmi.Naming;
@@ -10,8 +14,10 @@ import java.rmi.registry.LocateRegistry;
  * Created by ubuntu2 on 6/17/17.
  */
 public class helloServer {
+    private static final Log LOG = LogFactory
+            .getLog(helloServer.class);
     public static void main(String args[]) {
-
+        LOG.info("I am in hello server!");
         try {
             //创建一个远程对象
             remoteInterface rhello = new remoteImple();

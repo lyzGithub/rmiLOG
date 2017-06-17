@@ -1,5 +1,8 @@
 package server;
 
+import org.apache.commons.logging.Log;
+import org.apache.commons.logging.LogFactory;
+
 import java.rmi.RemoteException;
 import java.rmi.server.UnicastRemoteObject;
 
@@ -14,6 +17,8 @@ public class remoteImple extends UnicastRemoteObject implements remoteInterface 
      *
      * @throws RemoteException
      */
+    private static final Log LOG = LogFactory
+            .getLog(remoteImple.class);
     public remoteImple() throws RemoteException {
     }
 
@@ -24,6 +29,7 @@ public class remoteImple extends UnicastRemoteObject implements remoteInterface 
      * @throws java.rmi.RemoteException
      */
     public String helloWorld() throws RemoteException {
+        LOG.info("I am in hello world implement!");
         return "Hello World!";
     }
 
@@ -35,6 +41,7 @@ public class remoteImple extends UnicastRemoteObject implements remoteInterface 
      * @throws java.rmi.RemoteException
      */
     public String sayHelloToSomeBody(String someBodyName) throws RemoteException {
+        LOG.info("I am in sayHelloToSomeBody implement!");
         return "你好，" + someBodyName + "!";
     }
 }
